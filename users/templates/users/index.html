@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Пользователи</title>
-  </head>
-  <body>
-    <!-- (сюда писать решение) -->
-    
-    <!-- (конец решения) -->
-  </body>
+<head>
+    <title>Список пользователей</title>
+</head>
+<body>
+    <h1>Список пользователей</h1>
+    <table border="1">
+        <tr>
+            <th>Имя пользователя</th>
+            <th>Имя и Фамилия</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user["username"] }}</td>
+            <td>
+                <a href="/users/{{ user["id"] }}">{{ user["first_name"] }} {{ user["last_name"] }}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
 </html>
+  

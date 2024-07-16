@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Пользователь</title>
-  </head>
-  <body>
-    <!-- (сюда писать решение) -->
-    
-    <!-- (конец решения) -->
-  </body>
+<head>
+    <title>Информация о пользователе</title>
+</head>
+<body>
+    <h1>Информация о пользователе</h1>
+    <table border="1">
+        <tr>
+            <th>Поле</th>
+            <th>Значение</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>{{ user["id"] }}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{ user["email"] }}</td>
+        </tr>
+        <tr>
+            <td>Имя</td>
+            <td>{{ user["first_name"] }}</td>
+        </tr>
+        <tr>
+            <td>Фамилия</td>
+            <td>{{ user["last_name"] }}</td>
+        </tr>
+        <tr>
+            <td>Имя пользователя</td>
+            <td>{{ user["username"] }}</td>
+        </tr>
+    </table>
+</body>
 </html>
