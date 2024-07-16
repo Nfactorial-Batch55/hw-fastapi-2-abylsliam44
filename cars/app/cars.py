@@ -1,5 +1,4 @@
 import random
-
 from faker import Faker
 from faker_vehicle import VehicleProvider
 
@@ -22,3 +21,9 @@ def create_cars(cars_total):
     ]
 
     return cars
+    
+def get_car_by_id(id: int, cars_list):
+    for car in cars_list:
+        if car["id"] == id:
+            return car
+    return None
